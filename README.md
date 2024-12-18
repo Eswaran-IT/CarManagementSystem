@@ -22,11 +22,53 @@ The Car Management System is a RESTful API built using **Spring Boot**. It allow
 
 
 ###Postman API Collection - CRUD Operations
-C - Create a Car
-Create a new car in the system by submitting the car details. This allows adding a car with all required attributes.
-R - Read (View) a Car
-Retrieve a list of cars from the system. You can filter, sort, and paginate the results for efficient data retrieval.
-U - Update a Car
-Update the details of an existing car. This allows modifying the car's attributes such as name, model, year, price, and more.
-D - Delete a Car
-Delete an existing car from the system by providing its unique identifier. This operation removes the car record permanently.
+
+
+### C - Create a Car
+- **Description**: Create a new car in the system by submitting the car details.
+- **Request Type**: `POST`
+- **Required Fields**:
+  - `name`: Name of the car
+  - `model`: Model of the car
+  - `year`: Year of manufacture
+  - `price`: Price of the car
+  - `color`: Color of the car
+  - `fuelType`: Type of fuel (e.g., Petrol, Diesel, Electric)
+- **Response**: A new car object will be created and returned.
+
+---
+
+### R - Read (View) Cars
+- **Description**: Retrieve a list of cars from the system.
+- **Request Type**: `GET`
+- **Optional Parameters**:
+  - `page`: Page number for pagination (default `0`)
+  - `size`: Number of cars per page (default `10`)
+  - `sortBy`: Field to sort by (default `id`)
+  - `direction`: Sorting direction (`ASC` or `DESC`, default `ASC`)
+- **Response**: A paginated list of cars is returned.
+
+---
+
+### U - Update a Car
+- **Description**: Update the details of an existing car in the system.
+- **Request Type**: `PUT`
+- **Required Fields** (in request body):
+  - `name`: Updated name of the car
+  - `model`: Updated model of the car
+  - `year`: Updated year of manufacture
+  - `price`: Updated price
+  - `color`: Updated color
+  - `fuelType`: Updated fuel type
+- **Response**: The updated car object will be returned.
+
+---
+
+### D - Delete a Car
+- **Description**: Delete an existing car from the system by providing its unique identifier.
+- **Request Type**: `DELETE`
+- **Required Parameter**:
+  - `id`: The unique identifier (ID) of the car to be deleted.
+- **Response**: No content will be returned. The car is removed from the system.
+
+---
