@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "f39e913f-2fa8-4de2-8ea0-d179b38c99b6",
+		"name": "CarManagement API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31253096"
+	},
+	"item": [
+		{
+			"name": "Get All Cars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Toyota Corolla\",\r\n  \"model\": \"2024\",\r\n  \"year\": 2024,\r\n  \"price\": 20000,\r\n  \"color\": \"Red\",\r\n  \"fuelType\": \"Petrol\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Toyota Corolla\",\r\n  \"model\": \"2024\",\r\n  \"year\": 2024,\r\n  \"price\": 25000,\r\n  \"color\": \"Blue\",\r\n  \"fuelType\": \"Petrol\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Single Car by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2022,\r\n  \"price\": 28000,\r\n  \"color\": \"White\",\r\n  \"fuelType\": \"Petrol\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Car by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/cars/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cars",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Multiple Cars",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"name\": \"Ford\",\r\n    \"model\": \"Mustang\",\r\n    \"year\": 2021,\r\n    \"price\": 55000,\r\n    \"color\": \"Red\",\r\n    \"fuelType\": \"Petrol\"\r\n  },\r\n  {\r\n    \"name\": \"Tesla\",\r\n    \"model\": \"Model 3\",\r\n    \"year\": 2023,\r\n    \"price\": 45000,\r\n    \"color\": \"Black\",\r\n    \"fuelType\": \"Electric\"\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/cars/bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cars",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
